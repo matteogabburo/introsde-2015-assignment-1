@@ -1,0 +1,47 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Simple elements -->
+    <xsd:element name="firstname" type="xsd:string"/>
+    <xsd:element name="lastname" type="xsd:string"/>
+    <xsd:element name="birthdate" type="xsd:string"/>
+    <xsd:element name="lastupdate" type="xsd:string"/>
+    <xsd:element name="weight" type="xsd:integer"/>
+    <xsd:element name="height" type="xsd:float"/>
+    <xsd:element name="bmi" type="xsd:float"/>
+
+    <!-- Attributes -->
+    <xsd:attribute name="id" type="xsd:string"/>
+
+    <!-- Complex elements -->
+    <xsd:element name = "people">
+        <xsd:complexType>
+            <xsd:sequence maxOccurs="unbounded">
+                <xsd:element ref="person"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name = "person">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="firstname"/>
+                <xsd:element ref="lastname"/>
+                <xsd:element ref="birthdate"/>
+                <xsd:element ref="healthprofile"/>
+            </xsd:sequence>
+            <xsd:attribute ref="id" use="required"/>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name = "healthprofile">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="lastupdate"/>
+                <xsd:element ref="weight"/>
+                <xsd:element ref="height"/>
+                <xsd:element ref="bmi"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+</xsd:schema>
