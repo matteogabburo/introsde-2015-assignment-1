@@ -122,9 +122,9 @@ It is very similiar to unMarshall() function in the concept, the difference is t
 and it create new JSon file in res/ directory.
 
 ## How to run
-1) Download and install ant
-2) Put the assignment file in a directory
-3) Go to directory
-4) Run by shell following commands: 
-* ant clean
-* ant exec.evaluation (OR and exec.evaluation > output.txt if you want to see the evaluation results in a text file)
+1. Download and install ant
+2. Put the assignment file in a directory
+3. Go to directory
+4. Run by shell following commands: 
+  * ant clean
+  * ant exec.evaluation (OR and exec.evaluation > output.txt if you want to see the evaluation results in a text file)
