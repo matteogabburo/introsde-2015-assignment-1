@@ -7,7 +7,7 @@ The project is initially composed by two main folders :
 * src
 * res
 
-After ran "ant.compile", that will be generated other three folders
+After ran "ant.compile", that will  generate other three folders
 
 * ivy
 * build
@@ -78,7 +78,7 @@ All the important functions of the project are stored in "src/assignment/functio
 Now I'm going to explain what every single function does.
 
 ##### private String parseId(int id)
-Take an int for parameter, work with it and return it in String form for xpath. I give to you an example: if id is 8
+Take an int for parameter, work with it and return it in String form for xpath.Here there's an example: if id is 8
 parseId() returns "0008". I decide to do this private function because id field in my .xml file is a String type, and
 without this function we might have problem with xpath.
 
@@ -99,8 +99,8 @@ This is the function based on lab3 that return the float value that represent he
 Very similiar to getHeight but this return an int that represent the weight
 
 ##### public void printPeopleWithDetails()
-This function doesn't return anything, but it print the attributes of all the "Person Nodes" that .xml contains. For
-do this it use an xpath expression that return the list of the people and later with a for cycle print the attributes.
+This function doesn't return anything, but it print the attributes of all the "Person Nodes" that .xml contains.To
+do this it uses an xpath expression that return the list of the people and later with a for cycle print the attributes.
 
 ##### public NodeList getHealthProfile(int id)
 Return people with id equal to parameter id.
