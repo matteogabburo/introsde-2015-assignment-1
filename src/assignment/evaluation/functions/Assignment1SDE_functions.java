@@ -88,16 +88,17 @@ public class Assignment1SDE_functions
         return this.xpath;
     }
 
-    //Based on Lab3 point (1) Use xpath to implement methods like getWeight and getHeight
-    public Node getHeight(int id) throws XPathExpressionException {
+     //Based on Lab3 point (1) Use xpath to implement methods like getWeight and getHeight
+    public float getHeight(int id) throws XPathExpressionException {
+
         XPathExpression expr = xpath.compile("/people/person[@id = '"+this.parseId(id)+"']/healthprofile/height");
         Node node = (Node) expr.evaluate(doc, XPathConstants.NODE);
-        return node;
+        return Float.parseFloat(node.getTextContent());
     }
-    public Node getWeight(int id) throws XPathExpressionException {
+    public int getWeight(int id) throws XPathExpressionException {
         XPathExpression expr = xpath.compile("/people/person[@id = '"+this.parseId(id)+"']/healthprofile/weight");
         Node node = (Node) expr.evaluate(doc, XPathConstants.NODE);
-        return node;
+        return Integer.parseInt(node.getTextContent());
     }
 
     //Based on Lab3 point (2) Make a function that prints all people in the list with detail
@@ -127,7 +128,6 @@ public class Assignment1SDE_functions
 
         NodeList nodes = (NodeList) expr.evaluate(doc, XPathConstants.NODESET);
 
-        System.out.println(nodes.getLength());
         for(int i = 0; i < nodes.getLength(); i++) {
             System.out.println("id("+nodes.item(i).getAttributes().getNamedItem("id").getTextContent()+")");
             System.out.println(nodes.item(i).getTextContent());

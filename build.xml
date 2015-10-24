@@ -62,9 +62,9 @@
 
     <!--=========================================== Evalutation =====================================================-->
     <target name="execute.evaluation" depends="compile" description="--> retrieve dependencies with ivy">
-        <echo message = ""/>
         <echo message = "============================================================================================"/>
         <echo message="  Executing Evaluation (1)" />
+	<echo message="  Prints all people in the list with detail" />
         <echo message = "============================================================================================"/>
         <echo message = ""/>
         <echo message="Executing Evaluation (1)" />
@@ -79,6 +79,7 @@
         <echo message = ""/>
         <echo message = "============================================================================================"/>
         <echo message="  Executing Evaluation (2)" />
+	<echo message="  Return the healthProfile of the Person with id equal to 5" />
         <echo message = "============================================================================================"/>
         <echo message = ""/>
         <java classname="assignment.evaluation.Evaluation2_Assignment1SDE" classpath= "${build.dir}">
@@ -92,6 +93,7 @@
         <echo message = ""/>
         <echo message = "============================================================================================"/>
         <echo message="  Executing Evaluation (3)" />
+	<echo message="  Print all the people who have weight > 90" />
         <echo message = "============================================================================================"/>
         <echo message = ""/>
         <java classname="assignment.evaluation.Evaluation3_Assignment1SDE" classpath= "${build.dir}">
@@ -104,7 +106,11 @@
         </java>
         <echo message = ""/>
         <echo message = "============================================================================================"/>
-        <echo message="  Executing Evaluation (4)" />
+        <echo message="  Executing Evaluation (4)"/>
+	<echo message="  Marshaling to XML - create 3 persons and added to .xml file and print them"/>
+	<echo message="  IMPORTANT:"/>
+	<echo message="  People are ADDED to an existed file that has already other people in. If you run many times"/>
+	<echo message="  this script you have the same people added many times (obviusly with a different id)"/>
         <echo message = "============================================================================================"/>
         <echo message = ""/>
         <java classname="assignment.evaluation.Evaluation4_Assignment1SDE" classpath= "${build.dir}">
@@ -118,6 +124,7 @@
         <echo message = ""/>
         <echo message = "============================================================================================"/>
         <echo message="  Executing Evaluation (5)" />
+	<echo message="  Un-marshalling XML to java and print" />
         <echo message = "============================================================================================"/>
         <echo message = ""/>
 
@@ -132,6 +139,7 @@
 	<echo message = ""/>
         <echo message = "============================================================================================"/>
         <echo message="  Executing Evaluation (6)" />
+	<echo message="  marshaling to JSON - create 3 persons using java and marshal them to JSON and print them" />
         <echo message = "============================================================================================"/>
         <echo message = ""/>
         <java classname="assignment.evaluation.Evaluation6_Assignment1SDE" classpath= "${build.dir}">
